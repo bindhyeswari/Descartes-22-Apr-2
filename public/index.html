@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/contacts');
+        xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+        xhr.send('name=Raymond&email=raymondmail');
+
+    </script>
+</head>
+<body>
+<!--<form action="/" method="post" enctype="">
+    <input type="text" name="username"/>
+    <input type="text" name="email"/>
+    <input type="submit" value="Post data ... "/>
+</form>-->
+</body>
+</html>
