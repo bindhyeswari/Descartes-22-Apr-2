@@ -5,10 +5,37 @@
     <title></title>
     <script>
 
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/contacts');
-        xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
-        xhr.send('name=Raymond&email=raymondmail');
+        var ContactService = {
+            get: function (id) {
+                // gets all the contacts
+            },
+            create: function (obj) {
+
+            },
+            getAll: function () {
+
+            },
+            update: function (id, obj) {
+
+            },
+            delete: function (id) {
+
+            }
+        };
+
+        function makeAjaxCall(url, httpVerb, obj, callback) { // obj is optional depending on the request
+            var xhr = new XMLHttpRequest();
+            xhr.open(httpVerb, url);
+            // if the httpVerb is post, modify the request header - content-type, xhr.send(JSON.stringify(obj))
+
+            xhr.addEventListener(function () {
+                if (xhr.readyState === 4) {
+                    callback(xhr);
+                }
+            });
+            xhr.send();
+        }
+
 
     </script>
 </head>
